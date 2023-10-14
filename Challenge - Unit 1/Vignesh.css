@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Nav & Banner... */
+#navTitle {
+    color: white;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.nav-title {
+    border-color: #4b6cc1;
+    border-style: solid;
+    border-width: 3px;
+
+}
+
+#navColor {
+    color: #ffffff;
+}
+
+#navColor:hover {
+    color: black;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: #cced00;
+}
+
+.banner-bg {
+    background-color: #191a1d;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+}
+
+.img {
+    margin-left: 80px;
+    width: 70%;
+
+}
+
+.head {
+    font-family: "Roboto";
+    font-size: 50px;
+    font-weight: 500;
+    color: white;
+    margin-top: 15px;
+}
+
+.jenny {
+    color: #4b6cc1;
+}
+
+.para {
+    font-family: "Roboto";
+    font-size: 27px;
+    font-weight: 300;
+    color: #9aa5b1;
+    margin-top: 15px;
+}
+
+.btn {
+    height: 45px;
+    width: 130px;
+    background-color: #4b6cc1;
+    color: white;
+    border-radius: 10px;
+}
+
+/* About Me Section... */
+
+.about-bg-con {
+    background-color: #323f4b;
+    font-family: "Roboto";
+}
+
+.about-title {
+    font-size: 25px;
+    font-weight: 600;
+    color: #cced00;
+}
+
+.about-head {
+    font-size: 37px;
+    font-weight: 700;
+    color: white;
+}
+
+.about-img {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.about-desc {
+    font-size: 20px;
+    font-weight: 300;
+    color: #9aa5b1;
+    margin-top: 20px;
+}
+
+.about-skills-con {
+    background-color: #1f2933;
+}
+
+.about-skills-card {
+    background-color: #323f4b;
+    border-radius: 10px;
+    padding: 12px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-skills-card-img {
+    width: 50%;
+}
+
+.about-skills-card-desc {
+    font-size: 27px;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Projects Section... */
+
+.project-bg {
+    background-color: #3a4c59;
+    font-family: "Roboto";
+}
+
+.project-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #cced00;
+}
+
+.project-head {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
+.project-card {
+    background-color: #323f4b;
+    margin-bottom: 18px;
+    border-radius: 13px;
+}
+
+.project-card-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-card-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: #9aa5b1;
+}
+
+.project-card-head {
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+}
+
+.project-card-desc {
+    font-size: 23px;
+    font-weight: 400;
+    color: #9aa5b1;
+}
+
+.project-card-link {
+    font-size: 15px;
+    font-weight: 700;
+    color: #cced00;
+}
+
+/* Services Section... */
+
+.services-bg {
+    background-color: #52606d;
+    font-family: "Roboto";
+}
+
+.services-title {
+    font-size: 25px;
+    font-weight: 600;
+    color: #cced00;
+}
+
+.services-head {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+
+.services-card {
+    background-color: #323f4b;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.services-card-img {
+    width: 50px;
+}
+
+.services-card-head {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin-top: 15px;
+}
+
+.services-card-desc {
+    font-size: 25px;
+    font-weight: 400;
+    color: #9aa5b1;
+}
+
+/* WorkDone Section... */
+
+.workdone-bg {
+    background-image: url('https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-work-done-bg.png');
+    background-size: cover;
+
+}
+
+.workdone-icon {
+    color: white;
+    font-weight: 900;
+}
+
+.hr-line {
+    border-color: white;
+    border-width: 1px;
+    width: 70px;
+}
+
+.workdone-head {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.workdone-desc {
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+}
+
+/* Footer Section... */
+
+.foot-bg {
+    background-color: #0d2436;
+}
+
+.foot-img {
+
+    border-radius: 50px;
+}
+
+.foot-head {
+    font-size: 25px;
+    font-weight: 700;
+    color: #cced00;
+    margin-top: 15px;
+}
+
+.foot-desc {
+    font-size: 20px;
+    font-weight: 400;
+    color: #9aa5b1;
+}
+
+.foot-icon {
+    color: #5a7184;
+    font-size: 25px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+.foot-add-card {
+    margin-top: 17px;
+}
+
+.foot-end {
+    background-color: #001c32;
+}
