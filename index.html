@@ -1,186 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Vigneshwaran - Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #333;
-        }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-        header {
-            background-color: #555;
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-            position: relative; /* Add this */
-        }
-
-        .header-content h1 {
-            font-size: 2.5rem;
-        }
-
-        /* Add styles for the round profile picture */
-        .profile-picture {
-            width: 100px; /* Adjust the size as needed */
-            height: 100px;
-            border-radius: 75%; /* Create a circular shape */
-            object-fit: cover; /* To ensure the image fills the circular area */
-            position: absolute; /* Add this */
-            top: 50px; /* Adjust top position as needed */
-            left: 75px; /* Adjust left position as needed */
-        }
-
-        nav {
-            background-color: darkgray;
-            color: black;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .section-content {
-            background-color: lavender;
-            
-            padding: 2rem;
-            margin: 1rem;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: justify;
-        }
-
-        .download-button {
-            background-color: #333;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
-            align-self: center;
-        }
-
-        .download-button:hover {
-            background-color: #555;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-    </style>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <div class="header-content">
-            <!-- Add your profile picture here -->
-            <img src="https://res.cloudinary.com/dxtmy0dw4/image/upload/v1694522938/My_Photo-modified_vplc4j.png" alt="Your Profile Picture" class="profile-picture">
-            <h1>Vigneshwaran</h1>
-            <p>Dr.Zakir Husain College, Ilayangudi - B.Sc Computer Science</p>
+    <h1>Simple Calculator</h1>
+    <div class="d-flex flex-row justify-content-center">
+        <input type="text" id="display" readonly />
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <button onclick="appendtoDisplay('7')">7</button>
+            </div>
+            <div class="col-3">
+                <button onclick="appendtoDisplay('8')">8</button>
+            </div>
+            <div class="col-3">
+                <button onclick="appendtoDisplay('9')">9</button>
+            </div>
+            <div class="col-3">
+                <button onclick="appendtoDisplay('+')" id="o-button">+</button>
+            </div>
+
+
+            <div class="col-3">
+                <button onclick="appendtoDisplay('4')">4</button>
+            </div>
+            <div class="col-3">
+                <button onclick="appendtoDisplay('5')">5</button>
+            </div>
+            <div class="col-3">
+                <button onclick="appendtoDisplay('6')">6</button>
+            </div>
+            <div class="col-3">
+                <button onclick="appendtoDisplay('-')" id="o-button">-</button>
+            </div>
+
+
+
+            <div class="col-3">
+                <button onclick="appendtoDisplay('1')">1</button>
+            </div>
+            <div class="col-3">
+                <button onclick="appendtoDisplay('2')">2</button>
+            </div>
+            <div class="col-3">
+                <button onclick="appendtoDisplay('3')">3</button>
+            </div>
+            <div class="col-3">
+                <button onclick="appendtoDisplay('*')" id="o-button">*</button>
+            </div>
+
+
+            <div class="col-3">
+                <button onclick="clearDisplay()" id="c-button">C</button>
+            </div>
+            <div class="col-3">
+                <button onclick="calculateResult()" id="res-button">=</button>
+            </div>
+            <div class="col-3">
+                <button onclick="appendtoDisplay('0')">0</button>
+            </div>
+            <div class="col-3">
+                <button onclick="appendtoDisplay('/')" id="o-button">/</button>
+            </div>
+
         </div>
-    </header>
+    </div>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-        </ul>
-    </nav>
 
-    <section id="about">
-        <div class="section-content">
-            <h2>About Me</h2>
-            <p>I'm a Computer Science Student and Frontend Developer...</p>
-        </div>
-    </section>
-
-    <section id="education">
-        <div class="section-content">
-            <h2>Education</h2>
-            <p>Alagappa University  -  B.Sc Computer Science</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="section-content">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Java Script</li>
-                <li>Python</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="section-content">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://vigneshportal1.ccbp.tech/">My Portal</a></li>
-                <li><a href="https://vigneshfoodmun.ccbp.tech/">Responsive Food Munch Webpage</a></li>
-                <!-- Add more project links here -->
-            </ul>
-        </div>
-    </section>
-
-    <section id="resume">
-    
-        <div class="section-content">
-            <center>
-            <h2>Resume</h2>
-            <a href="https://drive.google.com/file/d/1tv4UsaXUSGWiPjBqutsEekTyLLXb29hR/view?usp=drive_link" target="_blank" class="download-button">Download CV</a>
-        </center>
-        </div>
-        
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Vigneshwaran</p>
-    </footer>
-
-    <script>
-        // Smooth scrolling to section when clicking on navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="script.js" type="text/javascript"></script>
 </body>
+
 </html>
